@@ -1,14 +1,33 @@
-# Welcome to your CDK TypeScript project
+# CDKでのネットワークリソース作成をお試しするためのリポジトリです
 
-This is a blank project for CDK development with TypeScript.
+## 手順
+1.まずクローンする
+以下のURLからリポジトリをクローンする
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+`git@github.com:kaito-nakamura-lvgs/CDK-practice.git`
 
-## Useful commands
+2.パッケージをインストールする
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+`npm install`
+
+3.以下二つのファイルを作成する
+
+- `.env.(環境名)`
+- `.env`
+
+`.env.(環境名)`ファイルを`.env.example`を見ながら編集する
+
+.envの中身は空でok
+
+4.リソースを呼び出す
+
+`cdk-practice-stack`にてリソースを呼び出す
+
+5.コマンドを実行
+
+```
+$ npm run build --env=<環境名>           #　.env.<環境名>を.envにコピー後、コードのビルドを実行
+$ npx cdk ls                            # スタック名を確認
+$ npx cdk diff   <スタック名>              # スタックの差分を確認
+$ npx cdk deploy <スタック名>              # CDKのデプロイを実行
+```
