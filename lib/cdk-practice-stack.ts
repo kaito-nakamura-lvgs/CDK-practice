@@ -4,6 +4,6 @@ import { Construct } from 'constructs';
 export class CdkPracticeStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
-
+    
   }
 }

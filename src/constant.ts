@@ -16,7 +16,7 @@ const constants = {
   igwId: process.env.IGW_ID as string,
   subnetAvailablityZone: process.env.SUBNET_AVAILABILITY_ZONE as string,
   publicSubnetCidrBlock: process.env.PUBLIC_SUBNET_CIDR_BLOCK as string,
-  dbSubnetCidrBlock: process.env.DB_SUBNET_CIDR_BLOCK as string,
+  privateSubnetCidrBlock: process.env.DB_SUBNET_CIDR_BLOCK as string,
   subnetMapPublicIpOnLaunch: (process.env.SUBNET_MAP_PUBLIC_IP_ON_LAUNCH === 'true') as boolean,
   securityGroupDescription: process.env.SECURITY_GROUP_DESCRIPTION as string,
   iamRoleName: process.env.IAM_ROLE_NAME as string,
