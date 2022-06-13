@@ -2,9 +2,15 @@
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { CdkPracticeStack } from '../lib/cdk-practice-stack';
+import constants from '../src/constant';
 
 const app = new cdk.App();
-new CdkPracticeStack(app, 'CdkPracticeStack', {
+new CdkPracticeStack(app, `${constants.stackTargetEnv}-${constants.stackName}`, {
+  description: constants.stackDescription,
+  env: {
+    account: constants.stackDeployAccount,
+    region: constants.stackDeployRegion
+  }
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
